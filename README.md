@@ -11,7 +11,7 @@ An unopinionated and easily extensible ai framework
   - [Basic Example](#basic-example)
   - [Tools](#tools)
   - [Social Agent (WIP)](#building-a-social-agent-wip)
-- [Examples]
+- [Examples](#examples)
 
 ## Documentation
 
