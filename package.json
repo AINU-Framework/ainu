@@ -1,5 +1,5 @@
 {
-  "name": "@ainu/ai",
+  "name": "@ainulabs/ainu",
   "version": "0.0.1",
   "description": "A simple, light weight, and unopinionated ai framework.",
   "license": "ISC",
@@ -24,7 +24,7 @@
   },
   "keywords": [
     "ai framework",
-    "@ainu/ai",
+    "@ainulabs/ai",
     "agent framework"
   ],
   "scripts": {

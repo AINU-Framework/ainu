@@ -20,7 +20,7 @@ An unopinionated and easily extensible ai framework
 `ainu` can be added to your project through npm.
 
 ```
-npm i @ainu/ai
+npm i @ainulabs/ainu
 ```
 
 ## Getting Started
