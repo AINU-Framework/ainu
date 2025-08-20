@@ -6,7 +6,7 @@ An unopinionated and easily extensible ai framework
 
 ## Table of Contents
 
-- [Documentation](#documentation)
+- [Documentation](#-documentation)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
   - [Creating a Agent](#creating-a-agent)
@@ -15,7 +15,18 @@ An unopinionated and easily extensible ai framework
   - [Social Agent (WIP)](#building-a-social-agent-wip)
 - [Examples](#examples)
 
-## Documentation
+Here’s a well-structured section for your README that outlines the availability of the TypeDocs and overview documentation:
+
+---
+
+## 📚 Documentation
+
+AINU provides comprehensive documentation to help you get started and dive deeper into the framework. Below is an overview of the available resources:
+
+| **Documentation Type** | **Description**                                                                                                                                                            | **Link**                                      |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **TypeDocs**           | Detailed API reference generated from the source code. Includes all classes, methods, and types used in AINU. Ideal for developers looking for in-depth technical details. | [TypeDocs](https://ainu-labs.github.io/ainu/) |
+| **Overview Docs**      | High-level documentation covering concepts, examples, and guides for using AINU. Perfect for understanding the framework and its use cases.                                | [Overview Docs](https://docs.ainu.pro/)       |
 
 ## Installation
 
