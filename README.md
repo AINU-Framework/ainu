@@ -6,14 +6,15 @@ An unopinionated and easily extensible ai framework
 
 ## Table of Contents
 
-- [Documentation](#-documentation)
-- [Installation](#installation)
-- [Getting Started](#getting-started)
-  - [Creating a Agent](#creating-a-agent)
-  - [Basic Example](#basic-example)
-  - [Tools](#tools)
-  - [Social Agent (WIP)](#building-a-social-agent-wip)
-- [Examples](#examples)
+- [📚 Documentation](#-documentation)
+- [⚙️ Installation](#️-installation)
+- [🚀 Getting Started](#-getting-started)
+  - [🛠️ Creating an Agent](#️-creating-an-agent)
+  - [💡 Basic Example](#-basic-example)
+  - [🧰 Tools](#-tools)
+  - [🔗 MCP Clients](#-mcp-clients)
+  - [🤖 Social Agent (WIP)](#-social-agent-wip)
+- [📝 Example Repositories](#-example-repositories)
 
 Here’s a well-structured section for your README that outlines the availability of the TypeDocs and overview documentation:
 
@@ -28,7 +29,7 @@ AINU provides comprehensive documentation to help you get started and dive deepe
 | **TypeDocs**           | Detailed API reference generated from the source code. Includes all classes, methods, and types used in AINU. Ideal for developers looking for in-depth technical details. | [TypeDocs](https://ainu-labs.github.io/ainu/) |
 | **Overview Docs**      | High-level documentation covering concepts, examples, and guides for using AINU. Perfect for understanding the framework and its use cases.                                | [Overview Docs](https://docs.ainu.pro/)       |
 
-## Installation
+## ⚙️ Installation
 
 `ainu` can be added to your project through npm.
 
@@ -36,9 +37,9 @@ AINU provides comprehensive documentation to help you get started and dive deepe
 npm i @ainulabs/ainu
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Creating an Agent
+### 🛠️ Creating an Agent
 
 Creating an `Agent` is super simple and only requires a single `Provider` to be supplied.
 
@@ -47,7 +48,7 @@ const provider = new Anthropic({ apikey: "your-api-key" });
 const agent = new Agent({ provider });
 ```
 
-### Basic Example
+### 💡 Basic Example
 
 The following code is like the `hello, world!` of he `ainu` framework.
 
@@ -90,15 +91,19 @@ async function main() {
 main();
 ```
 
-### Tools
+### 🧰 Tools
 
-Tools can be provided in 3 ways:
+Tools can be provided in three ways:
 
-1. Through the constructor
-2. Calling `.putTool` on an agent instance
-3. Calling `.generateText` and including a `tools` parameter
+1. Through the constructor.
+2. By calling `.putTool` on an agent instance.
+3. By passing the `tools` parameter directly into a `.generateText` call.
 
-The first 2 methods will persist the tools in the agents class. The third way discards the tool after it is used.
+The first two methods persist the tools in the agent's class, while the third method discards the tool after it is used.
+
+---
+
+#### Example 1: Providing Tools Through the Constructor
 
 ```typescript
 import z from "zod";
@@ -117,25 +122,84 @@ const populationTool = new Tool("getPopulation", {
   },
 });
 
-// Method 1: in the constructor
 const agent = new Agent({
   provider: new Anthropic({
     apiKey: "your-api-key",
   }),
-  tools: [populationTool],
-});
-
-// Method 2: Calling agent.putTool
-agent.putTool(populationTool);
-
-// Method 3: Passing the tools into a agent.generateText call
-const result = await agent.generateText({
-  prompt: "What is the population of the US?",
-  tools: [populationTool],
+  tools: [populationTool], // Add tools during agent creation
 });
 ```
 
-### MCP Clients
+---
+
+#### Example 2: Adding Tools Dynamically Using `.putTool`
+
+```typescript
+import z from "zod";
+import { Agent } from "./agent";
+import { Anthropic } from "./providers";
+import { Tool } from "./tools";
+
+const populationTool = new Tool("getPopulation", {
+  description: "Get the population of any location",
+  parameters: z.object({
+    location: z.string(),
+  }),
+  handler: async (args) => {
+    // call some external system
+    return { population: 1000000 };
+  },
+});
+
+const agent = new Agent({
+  provider: new Anthropic({
+    apiKey: "your-api-key",
+  }),
+});
+
+// Add the tool dynamically
+agent.putTool(populationTool);
+```
+
+---
+
+#### Example 3: Passing Tools Directly to `.generateText`
+
+```typescript
+import z from "zod";
+import { Agent } from "./agent";
+import { Anthropic } from "./providers";
+import { Tool } from "./tools";
+
+const populationTool = new Tool("getPopulation", {
+  description: "Get the population of any location",
+  parameters: z.object({
+    location: z.string(),
+  }),
+  handler: async (args) => {
+    // call some external system
+    return { population: 1000000 };
+  },
+});
+
+const agent = new Agent({
+  provider: new Anthropic({
+    apiKey: "your-api-key",
+  }),
+});
+
+// Use the tool directly in a generateText call
+const result = await agent.generateText({
+  prompt: "What is the population of the US?",
+  tools: [populationTool], // Pass tools directly
+});
+```
+
+---
+
+These examples demonstrate the flexibility of tools in AINU. You can choose the method that best fits your use case, whether it's adding tools during agent creation, dynamically adding them later, or using them for specific tasks on the fly.
+
+### 🔗 MCP Clients
 
 You may also wish to supply your agent with access to an MCP server.
 
@@ -167,7 +231,7 @@ export const agent = new Agent({
 });
 ```
 
-## Building a social agent (WIP)
+## 🤖 Social Agent (WIP)
 
 This is just an example and none of the twitter functionality is actually complete here.
 I will create a seprate registry tools.
@@ -193,7 +257,7 @@ const agent = new Agent({
 // create a loading function that gets all information relevant for to the agent
 function mockLoadContext() {
   return {
-    Name: "Cubie",
+    Name: "Artificial Inu",
     Age: 5,
     Location: "Solana",
     Interests: ["AI", "Blockchain", "Web3"],
@@ -266,6 +330,6 @@ async function main() {
 main();
 ```
 
-## Examples
+## 📝 Example Repositories
 
 Example Repo's will be added to a list below.
