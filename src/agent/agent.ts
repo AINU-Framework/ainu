@@ -12,9 +12,6 @@ import {
   GenerateTextParams,
 } from "./agent.types";
 
-/**
- * @document ../../guides/agents/creation.md
- */
 export class Agent {
   /** The name of the agent. */
   name: string;
