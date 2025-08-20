@@ -1,5 +1,7 @@
 # AINU
 
+![AINU Banner](public/ainubanner.png)
+
 An unopinionated and easily extensible ai framework
 
 ## Table of Contents
