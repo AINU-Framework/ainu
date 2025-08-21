@@ -1,16 +1,16 @@
 {
   "name": "@ainulabs/ainu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple, light weight, and unopinionated ai framework.",
   "license": "ISC",
   "author": "",
   "homepage": "https://ainu.pro",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AINU-Framework/ainu"
+    "url": "git+https://github.com/AINU-Labs/ainu/"
   },
   "bugs": {
-    "url": "https://github.com/AINU-Framework/ainu/issues"
+    "url": "https://github.com/AINU-Labs/ainu/issues"
   },
   "type": "commonjs",
   "files": [
@@ -23,8 +23,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
+    "ainu",
+    "@ainulabs/ainu",
     "ai framework",
-    "@ainulabs/ai",
     "agent framework"
   ],
   "scripts": {
