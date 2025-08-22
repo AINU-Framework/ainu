@@ -16,8 +16,6 @@ An unopinionated and easily extensible ai framework
   - [🤖 Social Agent (WIP)](#-social-agent-wip)
 - [📝 Example Repositories](#-example-repositories)
 
-Here’s a well-structured section for your README that outlines the availability of the TypeDocs and overview documentation:
-
 ---
 
 ## 📚 Documentation
