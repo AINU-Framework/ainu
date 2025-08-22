@@ -1,9 +1,9 @@
-import { generateText } from "ai";
+import { generateText, GenerateTextResult, streamText, ToolSet } from "ai";
 import { MCP } from "../mcp/mcp";
 import { Provider } from "../providers";
 import { Tool } from "../tools";
 import { buildTools } from "../tools/util";
-import { AgentError, err, getMessages, ok } from "../utils";
+import { AgentError, err, getMessages, ok, Result } from "../utils";
 import { toMap } from "../utils/transform";
 import {
   AgentOptions,
@@ -78,7 +78,7 @@ export class Agent {
       messages: getMessages({ prompt, messages }),
     };
 
-    let result;
+    let result: Result<GenerateTextResult<ToolSet, unknown> | undefined>;
     try {
       const data = await generateText(config);
 
@@ -117,7 +117,7 @@ export class Agent {
       messages: getMessages({ prompt, messages }),
     };
 
-    return generateText(config);
+    return streamText(config);
   }
 
   /** Adds or replaces a tool in the agent's tools. */

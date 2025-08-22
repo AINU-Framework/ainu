@@ -1,6 +1,6 @@
 {
   "name": "@ainulabs/ainu",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple, light weight, and unopinionated ai framework.",
   "license": "ISC",
   "author": "",
@@ -39,7 +39,7 @@
     "test:tools": "jest --testPathPattern=tests/tools",
     "test:providers": "jest --testPathPattern=tests/providers",
     "test:utils": "jest --testPathPattern=tests/util",
-    "test:agents": "jest --testPathPattern=tests/agents",
+    "test:agent": "jest --testPathPattern=tests/agent",
     "test:mcp": "jest --testPathPattern=tests/mcp",
     "mock:mcp": "node --import tsx tests/mcp/mockMcpServer.ts"
   },
