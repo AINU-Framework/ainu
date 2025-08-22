@@ -38,7 +38,7 @@
     "test": "jest",
     "test:tools": "jest --testPathPattern=tests/tools",
     "test:providers": "jest --testPathPattern=tests/providers",
-    "test:utils": "jest --testPathPattern=tests/utils",
+    "test:util": "jest --testPathPattern=tests/util",
     "test:agents": "jest --testPathPattern=tests/agents",
     "test:mcp": "jest --testPathPattern=tests/mcp",
     "mock:mcp": "node --import tsx tests/mcp/mockMcpServer.ts"
