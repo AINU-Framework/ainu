@@ -30,6 +30,18 @@ describe("Agent", () => {
     expect(agent).toBeDefined();
     expect(agent.name).toBe("testAgent");
   });
+
+  it("should return a result object", async () => {
+    const agent = new Agent({
+      provider,
+    });
+    const result = await agent.generateText({
+      modelId: "test-model",
+      prompt: "Hello, world!",
+    });
+
+    expect(result).toBeDefined();
+  });
 });
 
 describe("Agent settings", () => {
