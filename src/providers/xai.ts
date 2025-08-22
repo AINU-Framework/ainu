@@ -2,7 +2,7 @@ import { createXai, XaiProvider, XaiProviderSettings } from "@ai-sdk/xai";
 import { Provider } from "./base";
 
 /** The support language models by xAI */
-export type XaiChatModelId =
+type XaiChatModelId =
   | "grok-3"
   | "grok-3-latest"
   | "grok-3-fast"
@@ -25,9 +25,9 @@ export type XaiChatModelId =
   | (string & {});
 
 /** The support image models by xAI */
-export type XaiImageModelId = "grok-2-image" | (string & {});
+type XaiImageModelId = "grok-2-image" | (string & {});
 
-export class XAI extends Provider<
+class Xai extends Provider<
   XaiProvider,
   XaiProviderSettings,
   XaiChatModelId | XaiImageModelId
@@ -47,3 +47,5 @@ export class XAI extends Provider<
     return "grok-2-image";
   }
 }
+
+export { Xai, type XaiChatModelId, type XaiImageModelId };

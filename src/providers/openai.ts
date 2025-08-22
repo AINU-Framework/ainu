@@ -6,7 +6,7 @@ import {
 import { OpenAIChatModelId, OpenAIImageModelId } from "@ai-sdk/openai/internal";
 import { Provider } from "./base";
 
-export class OpenAI extends Provider<
+class OpenAI extends Provider<
   OpenAIProvider,
   OpenAIProviderSettings,
   OpenAIChatModelId | OpenAIImageModelId
@@ -26,3 +26,5 @@ export class OpenAI extends Provider<
     return "dall-e-3";
   }
 }
+
+export { OpenAI, type OpenAIChatModelId, type OpenAIImageModelId };
