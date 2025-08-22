@@ -2,6 +2,7 @@ import { generateText, streamText } from "ai";
 import { MCP } from "../mcp/mcp";
 import { Provider } from "../providers";
 import { Tool } from "../tools";
+import type { Agent } from "./agent";
 
 export interface AgentSettings {
   /** The system prompt for the agent. */
