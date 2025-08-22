@@ -1,6 +1,6 @@
 {
   "name": "@ainulabs/ainu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple, light weight, and unopinionated ai framework.",
   "license": "ISC",
   "author": "",
@@ -61,6 +61,7 @@
     "@ai-sdk/xai": "^1.2.15",
     "@modelcontextprotocol/sdk": "^1.10.2",
     "ai": "^4.3.9",
+    "qwen-ai-provider": "^0.1.1",
     "zod": "^3.25.49"
   }
 }
