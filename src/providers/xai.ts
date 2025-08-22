@@ -3,6 +3,9 @@ import { Provider } from "./base";
 
 /** The support language models by xAI */
 type XaiChatModelId =
+  | "grok-4-0709"
+  | "grok-4"
+  | "grok-4-latest"
   | "grok-3"
   | "grok-3-latest"
   | "grok-3-fast"
