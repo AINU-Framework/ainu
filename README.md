@@ -4,6 +4,8 @@
 
 An unopinionated and easily extensible ai framework
 
+`CA: BKNdE8ZRe1cWPYRVytrwy3mUaCw95aDfUqR9zwojbonk`
+
 ## Table of Contents
 
 - [📚 Documentation](#-documentation)
