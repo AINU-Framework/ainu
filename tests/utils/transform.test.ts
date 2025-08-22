@@ -1,4 +1,4 @@
-import { toMap } from "../../src/utils/transform";
+import { toMap } from "../../src";
 
 describe("Transform Utilities", () => {
   it("should convert an array to a map using a key function", () => {

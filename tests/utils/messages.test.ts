@@ -1,17 +1,17 @@
 import { CoreMessage } from "ai";
-import { Error, getMessages } from "../../src";
+import { InternalError, getMessages } from "../../src";
 
 describe("getMessages", () => {
   it("throws an error when no parameters are provided", () => {
-    expect(() => getMessages({})).toThrow(Error);
+    expect(() => getMessages({})).toThrow(InternalError);
   });
 
   it("throws an error when messages is an empty array", () => {
-    expect(() => getMessages({ messages: [] })).toThrow(Error);
+    expect(() => getMessages({ messages: [] })).toThrow(InternalError);
   });
 
   it("throws an error when prompt is an empty string", () => {
-    expect(() => getMessages({ prompt: "" })).toThrow(Error);
+    expect(() => getMessages({ prompt: "" })).toThrow(InternalError);
   });
 
   it("returns messages when prompt is provided", () => {

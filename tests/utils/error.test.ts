@@ -1,4 +1,4 @@
-import { getErrorMessage, InternalError } from "../../src/utils/error";
+import { getErrorMessage, InternalError } from "../../src";
 
 const message = "Test error message";
 describe("getErrorMessage", () => {

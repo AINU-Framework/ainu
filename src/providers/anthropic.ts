@@ -6,7 +6,7 @@ import {
 import { AnthropicMessagesModelId } from "@ai-sdk/anthropic/internal";
 import { Provider } from "./base";
 
-export class Anthropic extends Provider<
+class Anthropic extends Provider<
   AnthropicProvider,
   AnthropicProviderSettings,
   AnthropicMessagesModelId
@@ -22,3 +22,5 @@ export class Anthropic extends Provider<
     return "claude-3-5-haiku-latest";
   }
 }
+
+export { Anthropic, type AnthropicMessagesModelId };
