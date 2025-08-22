@@ -1,4 +1,4 @@
-import { Anthropic } from "../../src/providers/anthropic";
+import { Anthropic } from "../../src";
 
 describe("Anthropic", () => {
   it("should initialize correctly with valid options", () => {

@@ -1,6 +1,5 @@
 import { z } from "zod";
-import { Anthropic, Tool } from "../../src";
-import { Agent } from "../../src/agent";
+import { Agent, Anthropic, Tool } from "../../src";
 
 const provider = new Anthropic({
   apiKey: "test-api-key",

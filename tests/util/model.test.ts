@@ -1,4 +1,4 @@
-import { Error, getModelId } from "../../src";
+import { InternalError, getModelId } from "../../src";
 
 const modelId = "gpt-3.5-turbo";
 describe("getModelId", () => {
@@ -11,9 +11,9 @@ describe("getModelId", () => {
   });
 
   it("should throw an error when no model ID or default model ID is provided", () => {
-    expect(() => getModelId()).toThrow(Error);
+    expect(() => getModelId()).toThrow(InternalError);
   });
   it("should throw an error model ID is undefined", () => {
-    expect(() => getModelId(undefined)).toThrow(Error);
+    expect(() => getModelId(undefined)).toThrow(InternalError);
   });
 });

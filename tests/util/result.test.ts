@@ -1,5 +1,4 @@
-import { InternalError } from "../../src/utils/error";
-import { buildResult, DEFAULT_RESULT, err, ok } from "../../src/utils/result";
+import { buildResult, DEFAULT_RESULT, err, InternalError, ok } from "../../src";
 
 describe("buildResult", () => {
   it("should return the DEFAULT_RESULT when no parameters are provided", () => {

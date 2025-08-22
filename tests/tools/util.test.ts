@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { buildTool } from "../../src/tools/util";
+import { buildTool } from "../../src";
 
 describe("buildTool", () => {
   it("should call buildTool with the correct config when build is invoked", () => {

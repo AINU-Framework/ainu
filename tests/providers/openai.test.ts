@@ -1,4 +1,4 @@
-import { OpenAI } from "../../src/providers/openai";
+import { OpenAI } from "../../src";
 
 describe("OpenAI", () => {
   it("should initialize correctly with valid options", () => {

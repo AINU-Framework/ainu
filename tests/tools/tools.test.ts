@@ -1,7 +1,6 @@
 import { jsonSchema } from "ai";
 import { z } from "zod";
-import { Tool } from "../../src/tools/tools";
-import { ToolConfig } from "../../src/tools/tools.types";
+import { Tool, ToolConfig } from "../../src";
 
 describe("Tool", () => {
   const mockConfig: ToolConfig = {
